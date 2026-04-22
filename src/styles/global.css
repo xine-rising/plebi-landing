@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@theme {
+  /* Background */
+  --color-bg: #0B1F0E;
+  --color-surface: #142A17;
+  --color-border: #1E3D22;
+
+  /* Primary — magenta rose (CTAs and interactive only) */
+  --color-primary: #C2185B;
+  --color-primary-hover: #AD1457;
+  --color-primary-light: #E91E8C;
+
+  /* Secondary — warm gold (sparingly) */
+  --color-gold: #F5A623;
+  --color-gold-light: #FDE68A;
+
+  /* Text */
+  --color-text: #F5F5F5;
+  --color-text-body: #D1D5DB;
+  --color-text-secondary: #9CA3AF;
+  --color-text-muted: #6B7280;
+
+  /* Status */
+  --color-success: #22C55E;
+  --color-error: #EF4444;
+
+  /* Font */
+  --font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+html {
+  background-color: var(--color-bg);
+  color: var(--color-text-body);
+  font-family: var(--font-sans);
+}
+
+body {
+  min-height: 100dvh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

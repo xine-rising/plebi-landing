@@ -1,0 +1,368 @@
+---
+const maxBirthYear = new Date().getFullYear() - 18;
+---
+
+<div class="signup-flow w-full max-w-md mx-auto" data-step="phone">
+  <!-- Step 1: Phone -->
+  <div class="step step-phone">
+    <form class="flex flex-col gap-3" novalidate>
+      <label for="signup-phone" class="text-text text-sm font-medium">Phone number</label>
+      <div class="flex flex-col sm:flex-row gap-3">
+        <input
+          id="signup-phone"
+          type="tel"
+          name="phone"
+          inputmode="tel"
+          autocomplete="tel"
+          placeholder="+1 (555) 123-4567"
+          required
+          class="flex-1 px-4 py-3 bg-surface border border-border rounded-lg text-text placeholder:text-text-muted text-base focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent min-h-[44px]"
+        />
+        <button
+          type="submit"
+          class="px-6 py-3 bg-primary hover:bg-primary-hover text-white font-semibold rounded-lg transition-colors duration-150 min-h-[44px] w-full sm:w-auto cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary-light focus:ring-offset-2 focus:ring-offset-bg"
+        >
+          Send code
+        </button>
+      </div>
+      <p class="text-text-muted text-xs">We'll text you a verification code. Standard SMS rates may apply.</p>
+    </form>
+  </div>
+
+  <!-- Step 2: OTP -->
+  <div class="step step-otp hidden">
+    <form class="flex flex-col gap-3" novalidate>
+      <label for="signup-otp" class="text-text text-sm font-medium">Enter the 6-digit code</label>
+      <div class="flex flex-col sm:flex-row gap-3">
+        <input
+          id="signup-otp"
+          type="text"
+          name="code"
+          inputmode="numeric"
+          autocomplete="one-time-code"
+          pattern="[0-9]{6}"
+          maxlength="6"
+          placeholder="123456"
+          required
+          class="flex-1 px-4 py-3 bg-surface border border-border rounded-lg text-text placeholder:text-text-muted text-base text-center tracking-[0.3em] font-mono focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent min-h-[44px]"
+        />
+        <button
+          type="submit"
+          class="px-6 py-3 bg-primary hover:bg-primary-hover text-white font-semibold rounded-lg transition-colors duration-150 min-h-[44px] w-full sm:w-auto cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary-light focus:ring-offset-2 focus:ring-offset-bg"
+        >
+          Verify
+        </button>
+      </div>
+      <button type="button" class="resend-btn text-primary-light text-sm text-left hover:underline cursor-pointer bg-transparent border-none p-0">
+        Resend code
+      </button>
+    </form>
+  </div>
+
+  <!-- Step 3: Profile -->
+  <div class="step step-profile hidden">
+    <form class="flex flex-col gap-4" novalidate>
+      <div>
+        <label for="signup-name" class="text-text text-sm font-medium block mb-1">Name</label>
+        <input
+          id="signup-name"
+          type="text"
+          name="name"
+          autocomplete="name"
+          required
+          class="w-full px-4 py-3 bg-surface border border-border rounded-lg text-text placeholder:text-text-muted text-base focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent min-h-[44px]"
+        />
+      </div>
+
+      <div>
+        <label for="signup-email" class="text-text text-sm font-medium block mb-1">Email</label>
+        <input
+          id="signup-email"
+          type="email"
+          name="email"
+          inputmode="email"
+          autocomplete="email"
+          autocapitalize="none"
+          spellcheck="false"
+          required
+          class="w-full px-4 py-3 bg-surface border border-border rounded-lg text-text placeholder:text-text-muted text-base focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent min-h-[44px]"
+        />
+      </div>
+
+      <div>
+        <label for="signup-birth-year" class="text-text text-sm font-medium block mb-1">Birth year</label>
+        <input
+          id="signup-birth-year"
+          type="number"
+          name="birth_year"
+          inputmode="numeric"
+          min="1900"
+          max={maxBirthYear}
+          placeholder="1990"
+          required
+          class="w-full px-4 py-3 bg-surface border border-border rounded-lg text-text placeholder:text-text-muted text-base focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent min-h-[44px]"
+        />
+      </div>
+
+      <label class="flex items-start gap-3 cursor-pointer py-1">
+        <input
+          type="checkbox"
+          name="is_driver"
+          class="mt-0.5 w-5 h-5 min-w-[20px] min-h-[20px] rounded border-border bg-surface accent-primary cursor-pointer"
+        />
+        <span class="text-text text-sm leading-snug">
+          I'm a professional driver
+          <span class="block text-text-muted text-xs mt-1">Check this if you drive for a living and want to list on Plebi.</span>
+        </span>
+      </label>
+
+      <button
+        type="submit"
+        class="mt-2 px-6 py-3 bg-primary hover:bg-primary-hover text-white font-semibold rounded-lg transition-colors duration-150 min-h-[44px] w-full cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary-light focus:ring-offset-2 focus:ring-offset-bg"
+      >
+        Create my account
+      </button>
+    </form>
+  </div>
+
+  <!-- Step 4: Success -->
+  <div class="step step-success hidden">
+    <div class="text-center py-4">
+      <p class="text-success text-lg font-semibold success-headline"></p>
+      <p class="mt-2 text-text-body text-base success-detail"></p>
+    </div>
+  </div>
+
+  <!-- Status / error display -->
+  <div class="signup-status mt-3 text-sm hidden" role="alert" aria-live="polite"></div>
+</div>
+
+<script define:vars={{ maxBirthYear }}>
+  document.querySelectorAll('.signup-flow').forEach((flow) => {
+    let phone = '';
+    let token = '';
+    const statusEl = flow.querySelector('.signup-status');
+
+    function showStatus(msg, type) {
+      statusEl.textContent = msg;
+      const colorClass = type === 'error' ? 'text-error' : 'text-success';
+      statusEl.className = `signup-status mt-3 text-sm ${colorClass}`;
+    }
+
+    function showError(msg) { showStatus(msg, 'error'); }
+    function showInfo(msg) { showStatus(msg, 'info'); }
+
+    function clearStatus() {
+      statusEl.textContent = '';
+      statusEl.className = 'signup-status mt-3 text-sm hidden';
+    }
+
+    function goToStep(name) {
+      flow.querySelectorAll('.step').forEach((s) => s.classList.add('hidden'));
+      flow.querySelector(`.step-${name}`)?.classList.remove('hidden');
+      flow.dataset.step = name;
+      clearStatus();
+    }
+
+    function setLoading(btn, loading) {
+      btn.disabled = loading;
+      btn.classList.toggle('opacity-50', loading);
+    }
+
+    function formatPhone(raw) {
+      const digits = raw.replace(/\D/g, '');
+      if (digits.length === 10) return '+1' + digits;
+      if (digits.length === 11 && digits.startsWith('1')) return '+' + digits;
+      return null;
+    }
+
+    // Step 1: Phone
+    const phoneForm = flow.querySelector('.step-phone form');
+    phoneForm?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = phoneForm.querySelector('button[type="submit"]');
+      const raw = phoneForm.querySelector('input[name="phone"]').value.trim();
+      const formatted = formatPhone(raw);
+
+      if (!formatted) {
+        showError('Please enter a valid US phone number.');
+        return;
+      }
+
+      phone = formatted;
+      setLoading(btn, true);
+
+      try {
+        const res = await fetch('/api/v1/auth/request-otp', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ phone }),
+        });
+
+        if (res.ok) {
+          goToStep('otp');
+        } else {
+          const data = await res.json();
+          showError(data.message || 'Failed to send code. Please try again.');
+        }
+      } catch {
+        showError('Something went wrong. Please try again.');
+      } finally {
+        setLoading(btn, false);
+      }
+    });
+
+    // Step 2: OTP
+    const otpForm = flow.querySelector('.step-otp form');
+    otpForm?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = otpForm.querySelector('button[type="submit"]');
+      const code = otpForm.querySelector('input[name="code"]').value.trim();
+
+      if (!/^\d{6}$/.test(code)) {
+        showError('Please enter the 6-digit code.');
+        return;
+      }
+
+      setLoading(btn, true);
+
+      try {
+        const res = await fetch('/api/v1/auth/verify-otp', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ phone, code }),
+        });
+
+        const data = await res.json();
+
+        if (res.ok && data.token) {
+          token = data.token;
+          if (data.user?.birth_year) {
+            showSuccess(false, data.user.driver_verification_status === 'pending');
+          } else {
+            goToStep('profile');
+          }
+        } else {
+          showError(data.message || 'Invalid code. Please try again.');
+        }
+      } catch {
+        showError('Something went wrong. Please try again.');
+      } finally {
+        setLoading(btn, false);
+      }
+    });
+
+    // Resend code with 30s cooldown
+    const resendBtn = flow.querySelector('.resend-btn');
+    resendBtn?.addEventListener('click', async () => {
+      resendBtn.disabled = true;
+      let remaining = 30;
+      const originalText = resendBtn.textContent;
+      resendBtn.textContent = `Resend in ${remaining}s`;
+      resendBtn.classList.add('opacity-50');
+
+      const countdown = setInterval(() => {
+        remaining--;
+        if (remaining <= 0) {
+          clearInterval(countdown);
+          resendBtn.textContent = originalText;
+          resendBtn.disabled = false;
+          resendBtn.classList.remove('opacity-50');
+        } else {
+          resendBtn.textContent = `Resend in ${remaining}s`;
+        }
+      }, 1000);
+
+      try {
+        const res = await fetch('/api/v1/auth/request-otp', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ phone }),
+        });
+
+        if (res.ok) {
+          showInfo('Code resent.');
+        } else {
+          showError('Failed to resend. Please try again.');
+        }
+      } catch {
+        showError('Failed to resend. Please try again.');
+      }
+    });
+
+    // Step 3: Profile
+    const profileForm = flow.querySelector('.step-profile form');
+    profileForm?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = profileForm.querySelector('button[type="submit"]');
+      const fd = new FormData(profileForm);
+
+      const name = fd.get('name')?.toString().trim();
+      const email = fd.get('email')?.toString().trim();
+      const birthYear = parseInt(fd.get('birth_year')?.toString() || '', 10);
+      const isDriver = profileForm.querySelector('input[name="is_driver"]').checked;
+
+      if (!name) { showError('Please enter your name.'); return; }
+      if (!email || !email.includes('@')) { showError('Please enter a valid email.'); return; }
+      if (!birthYear || birthYear < 1900 || birthYear > maxBirthYear) {
+        showError('You must be 18 or older to sign up.');
+        return;
+      }
+
+      setLoading(btn, true);
+
+      try {
+        const res = await fetch('/api/v1/signup/complete-profile', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`,
+          },
+          body: JSON.stringify({
+            name,
+            email,
+            birth_year: birthYear,
+            is_driver: isDriver,
+          }),
+        });
+
+        const data = await res.json();
+
+        if (res.ok && data.success) {
+          showSuccess(data.app_store_live, isDriver);
+        } else if (res.status === 409) {
+          showError(data.error || 'Profile already complete.');
+        } else {
+          const errors = data.errors;
+          if (errors) {
+            const firstError = Object.values(errors).flat()[0];
+            showError(firstError || 'Please check your inputs.');
+          } else {
+            showError(data.message || 'Something went wrong. Please try again.');
+          }
+        }
+      } catch {
+        showError('Something went wrong. Please try again.');
+      } finally {
+        setLoading(btn, false);
+      }
+    });
+
+    function showSuccess(appStoreLive, isDriver) {
+      const headline = flow.querySelector('.success-headline');
+      const detail = flow.querySelector('.success-detail');
+
+      headline.textContent = 'Your Plebi account is ready.';
+
+      if (appStoreLive) {
+        detail.textContent = 'Download the Plebi app to get started.';
+      } else if (isDriver) {
+        detail.textContent = "Your driver account is pending. Before you can list on Plebi, we'll need to verify your identity and credentials. We'll send you the next steps by email.";
+      } else {
+        detail.textContent = "We'll email you when the app launches.";
+      }
+
+      goToStep('success');
+    }
+  });
+</script>

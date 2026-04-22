@@ -1,0 +1,57 @@
+---
+import { t } from '../i18n/utils';
+import { Repeat, User, AlertTriangle, Accessibility } from '@lucide/astro';
+---
+
+<section class="px-6 py-16 sm:py-24 bg-surface">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="text-text text-2xl sm:text-3xl lg:text-4xl font-bold text-center">
+      {t('passengers.heading')}
+    </h2>
+    <p class="mt-4 text-text-body text-lg sm:text-xl text-center max-w-2xl mx-auto leading-relaxed">
+      {t('passengers.intro')}
+    </p>
+
+    <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
+      <div class="p-6 bg-bg border border-border rounded-2xl">
+        <Repeat class="w-8 h-8 text-gold mb-4" aria-hidden="true" />
+        <h3 class="text-text text-lg font-semibold">
+          {t('passengers.props.easyBooking.title')}
+        </h3>
+        <p class="mt-2 text-text-body text-base leading-relaxed">
+          {t('passengers.props.easyBooking.description')}
+        </p>
+      </div>
+
+      <div class="p-6 bg-bg border border-border rounded-2xl">
+        <User class="w-8 h-8 text-gold mb-4" aria-hidden="true" />
+        <h3 class="text-text text-lg font-semibold">
+          {t('passengers.props.directRelationship.title')}
+        </h3>
+        <p class="mt-2 text-text-body text-base leading-relaxed">
+          {t('passengers.props.directRelationship.description')}
+        </p>
+      </div>
+
+      <div class="p-6 bg-bg border border-border rounded-2xl">
+        <AlertTriangle class="w-8 h-8 text-gold mb-4" aria-hidden="true" />
+        <h3 class="text-text text-lg font-semibold">
+          {t('passengers.props.safety.title')}
+        </h3>
+        <p class="mt-2 text-text-body text-base leading-relaxed">
+          {t('passengers.props.safety.description')}
+        </p>
+      </div>
+
+      <div class="p-6 bg-bg border border-border rounded-2xl">
+        <Accessibility class="w-8 h-8 text-gold mb-4" aria-hidden="true" />
+        <h3 class="text-text text-lg font-semibold">
+          {t('passengers.props.accessible.title')}
+        </h3>
+        <p class="mt-2 text-text-body text-base leading-relaxed">
+          {t('passengers.props.accessible.description')}
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

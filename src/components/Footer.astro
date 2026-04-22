@@ -1,0 +1,48 @@
+---
+import { t } from '../i18n/utils';
+---
+
+<footer class="px-6 py-12 sm:py-16 border-t border-border">
+  <div class="max-w-4xl mx-auto flex flex-col items-center gap-6 text-center">
+    <p class="text-text text-xl font-bold tracking-tight">Plebi</p>
+
+    <p class="text-gold text-sm font-medium tracking-wide uppercase">
+      {t('footer.launching')}
+    </p>
+
+    <div class="flex items-center gap-6">
+      <a
+        href="https://instagram.com/plebi"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="text-text-secondary hover:text-text transition-colors duration-150"
+        aria-label="Plebi on Instagram"
+      >
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+          <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+        </svg>
+      </a>
+
+      <a
+        href="mailto:hello@plebi.app"
+        class="text-text-secondary hover:text-text transition-colors duration-150 text-sm"
+      >
+        {t('footer.contact')}
+      </a>
+    </div>
+
+    <div class="flex items-center gap-4 text-sm text-text-muted">
+      <a href="#" class="hover:text-text-secondary transition-colors duration-150">
+        {t('footer.privacy')}
+      </a>
+      <span aria-hidden="true">·</span>
+      <a href="#" class="hover:text-text-secondary transition-colors duration-150">
+        {t('footer.terms')}
+      </a>
+    </div>
+
+    <p class="text-text-muted text-xs">{t('footer.copyright')}</p>
+  </div>
+</footer>

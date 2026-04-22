@@ -1,0 +1,30 @@
+---
+import { t } from '../i18n/utils';
+import SignupFlow from './SignupFlow.astro';
+---
+
+<section class="px-6 py-16 sm:py-24 lg:py-32 flex flex-col items-center text-center">
+  <img
+    src="/logo.png"
+    alt="Plebi logo — a painted rose with magenta petals, gold center, and green leaves"
+    class="w-52 h-52 sm:w-72 sm:h-72 lg:w-80 lg:h-80 object-contain"
+    width="320"
+    height="320"
+  />
+
+  <h1 class="mt-6 text-text text-[2rem] sm:text-5xl lg:text-6xl font-bold tracking-tight leading-tight">
+    {t('hero.tagline')}
+  </h1>
+
+  <p class="mt-4 text-text-body text-lg sm:text-xl max-w-xl leading-relaxed">
+    {t('hero.subtagline')}
+  </p>
+
+  <p class="mt-2 text-gold text-sm font-medium tracking-wide uppercase">
+    {t('hero.launching')}
+  </p>
+
+  <div class="mt-8 w-full max-w-md">
+    <SignupFlow />
+  </div>
+</section>
