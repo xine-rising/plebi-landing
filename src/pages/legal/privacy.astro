@@ -1,0 +1,134 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<Layout title="Privacy Policy — Plebi" description="Plebi privacy policy. How we collect, use, and protect your personal information.">
+  <article class="max-w-3xl mx-auto px-6 py-12 sm:py-16">
+    <h1 class="text-2xl font-bold text-text mb-1">Plebi — Privacy Policy</h1>
+    <p class="text-sm text-text-muted mb-8">Last Updated: April 9, 2026</p>
+
+    <h2 class="text-lg font-bold text-text mt-8 mb-3">1. Who We Are</h2>
+    <p class="text-text-secondary leading-relaxed mb-3">Plebi is operated by OMNICURA LLC, an Oregon limited liability company. This policy describes how we collect, use, and protect your personal information when you use the Plebi mobile application.</p>
+
+    <h2 class="text-lg font-bold text-text mt-8 mb-3">2. Information We Collect</h2>
+    <p class="text-text-secondary leading-relaxed mb-2"><strong class="text-text">Account information:</strong></p>
+    <ul class="list-disc list-inside text-text-secondary leading-relaxed mb-3 space-y-1 pl-2">
+      <li>Phone number (required for account creation and verification)</li>
+      <li>Name (optional, provided by you)</li>
+      <li>Profile photo (optional)</li>
+    </ul>
+    <p class="text-text-secondary leading-relaxed mb-2"><strong class="text-text">Driver-specific information (if you register as a driver):</strong></p>
+    <ul class="list-disc list-inside text-text-secondary leading-relaxed mb-3 space-y-1 pl-2">
+      <li>Handle (username)</li>
+      <li>Bio</li>
+      <li>Vehicle information (make, model, year, color, license plate, fleet number)</li>
+      <li>Company name and fare rates</li>
+      <li>Driver qualifications and preferences</li>
+      <li>Uploaded documents (permits, licenses, certifications, insurance)</li>
+      <li>Weekly schedule and availability</li>
+    </ul>
+    <p class="text-text-secondary leading-relaxed mb-2"><strong class="text-text">Ride information:</strong></p>
+    <ul class="list-disc list-inside text-text-secondary leading-relaxed mb-3 space-y-1 pl-2">
+      <li>Pickup and dropoff addresses and coordinates</li>
+      <li>Scheduled ride times</li>
+      <li>Fare estimates and final fares</li>
+      <li>Ride status and history</li>
+      <li>Payment method selection (card or cash)</li>
+      <li>Notes provided with bookings</li>
+    </ul>
+    <p class="text-text-secondary leading-relaxed mb-2"><strong class="text-text">Device information:</strong></p>
+    <ul class="list-disc list-inside text-text-secondary leading-relaxed mb-3 space-y-1 pl-2">
+      <li>Expo push notification token (for sending ride notifications)</li>
+      <li>Device type and operating system (collected automatically by the platform)</li>
+    </ul>
+
+    <h2 class="text-lg font-bold text-text mt-8 mb-3">3. Information We Do NOT Collect</h2>
+    <ul class="list-disc list-inside text-text-secondary leading-relaxed mb-3 space-y-1 pl-2">
+      <li>We do not track your location in the background</li>
+      <li>We do not collect contacts, call logs, or browsing history</li>
+      <li>We do not access your camera or photos except when you choose to upload a document or profile photo</li>
+      <li>We do not sell, rent, or share your personal information with advertisers</li>
+      <li>We do not use your data for targeted advertising</li>
+    </ul>
+
+    <h2 class="text-lg font-bold text-text mt-8 mb-3">4. How We Use Your Information</h2>
+    <ul class="list-disc list-inside text-text-secondary leading-relaxed mb-3 space-y-1 pl-2">
+      <li>Phone number: To verify your identity via SMS one-time passcode and to enable driver-rider communication for booked rides</li>
+      <li>Name and profile info: To display to drivers or riders you have established a booking relationship with</li>
+      <li>Location data (addresses): To calculate fare estimates, display routes, and facilitate ride bookings</li>
+      <li>Ride history: To display your past and upcoming rides within the app</li>
+      <li>Driver documents: Stored securely on our servers to support driver verification</li>
+      <li>Push notification tokens: To send you ride request notifications and status updates</li>
+      <li>Payment information: For drivers who enable pre-payment, we use Stripe for payment processing. We do not store credit card numbers. Fare and tip amounts are stored on ride records. Pre-payment is optional — most payments are settled directly between rider and driver outside the app</li>
+    </ul>
+
+    <h2 class="text-lg font-bold text-text mt-8 mb-3">5. Who Can See Your Information</h2>
+    <p class="text-text-secondary leading-relaxed mb-2"><strong class="text-text">Riders can see about their saved drivers:</strong></p>
+    <ul class="list-disc list-inside text-text-secondary leading-relaxed mb-3 space-y-1 pl-2">
+      <li>Name, handle, bio, profile photo</li>
+      <li>Vehicle information and fleet number</li>
+      <li>Qualifications and preference badges</li>
+      <li>Flat rate offers</li>
+      <li>Document status (current/expiring/expired — not the actual documents)</li>
+      <li>Company name and available schedule</li>
+    </ul>
+    <p class="text-text-secondary leading-relaxed mb-2"><strong class="text-text">Drivers can see about riders who book with them:</strong></p>
+    <ul class="list-disc list-inside text-text-secondary leading-relaxed mb-3 space-y-1 pl-2">
+      <li>Name and phone number (for ride communication only)</li>
+      <li>Pickup and dropoff addresses for booked rides</li>
+      <li>Ride notes and ride history with that driver only</li>
+    </ul>
+
+    <h2 class="text-lg font-bold text-text mt-8 mb-3">6. Data Storage and Security</h2>
+    <ul class="list-disc list-inside text-text-secondary leading-relaxed mb-3 space-y-1 pl-2">
+      <li>All data is stored on servers in Switzerland, hosted by Infomaniak — a Swiss company subject to the Swiss Federal Act on Data Protection (FADP) and aligned with European GDPR standards</li>
+      <li>Switzerland is recognized by the European Commission as providing an adequate level of data protection, offering some of the strongest privacy protections in the world</li>
+      <li>Authentication is via phone number and one-time passcodes</li>
+      <li>API access is secured via token-based authentication</li>
+      <li>Uploaded documents are stored in private server storage, not publicly accessible</li>
+    </ul>
+
+    <h2 class="text-lg font-bold text-text mt-8 mb-3">7. Data Retention</h2>
+    <ul class="list-disc list-inside text-text-secondary leading-relaxed mb-3 space-y-1 pl-2">
+      <li>Your account and ride history are retained as long as your account is active</li>
+      <li>If you delete your account, your personal information (name, phone number, profile data, documents) is deleted immediately</li>
+      <li>Ride records and payment records are retained briefly after account deletion for dispute resolution, then permanently deleted</li>
+      <li>Push notification tokens are cleared when you log out</li>
+    </ul>
+
+    <h2 class="text-lg font-bold text-text mt-8 mb-3">8. Third-Party Services</h2>
+    <ul class="list-disc list-inside text-text-secondary leading-relaxed mb-3 space-y-1 pl-2">
+      <li>Twilio: Phone number verification (SMS)</li>
+      <li>Google Maps Platform: Address lookup, route calculation, fare estimation</li>
+      <li>Google Places Autocomplete: Address search and suggestions</li>
+      <li>Stripe: Optional pre-payment processing for drivers who enable it</li>
+      <li>Expo: Push notifications and app delivery</li>
+    </ul>
+    <p class="text-text-secondary leading-relaxed mb-3">We do not share your personal information with these services beyond what is necessary to provide the functionality described.</p>
+
+    <h2 class="text-lg font-bold text-text mt-8 mb-3">9. Your Rights</h2>
+    <ul class="list-disc list-inside text-text-secondary leading-relaxed mb-3 space-y-1 pl-2">
+      <li>Access your personal data through your app profile</li>
+      <li>Correct your personal data by editing your profile</li>
+      <li>Delete your account and associated data by contacting us</li>
+      <li>Export your ride history (contact us for a data export)</li>
+      <li>Opt out of push notifications through your device settings</li>
+    </ul>
+
+    <h2 class="text-lg font-bold text-text mt-8 mb-3">10. Children's Privacy</h2>
+    <p class="text-text-secondary leading-relaxed mb-3">Plebi is not intended for use by anyone under the age of 18. We do not knowingly collect information from children under 18.</p>
+
+    <h2 class="text-lg font-bold text-text mt-8 mb-3">11. Oregon and International Privacy Rights</h2>
+    <p class="text-text-secondary leading-relaxed mb-3">As an Oregon resident, you may have additional rights under Oregon consumer privacy laws. Because your data is stored in Switzerland, it also benefits from Swiss and European data protection standards, which provide strong safeguards for personal data including the right to access, rectify, and delete your data. To exercise any privacy rights, contact us at the email below.</p>
+
+    <h2 class="text-lg font-bold text-text mt-8 mb-3">12. Changes to This Policy</h2>
+    <p class="text-text-secondary leading-relaxed mb-3">We may update this policy from time to time. We will notify users of material changes through the app. Continued use after changes are posted constitutes acceptance.</p>
+
+    <h2 class="text-lg font-bold text-text mt-8 mb-3">13. Contact</h2>
+    <p class="text-text-secondary leading-relaxed mb-1">OMNICURA LLC</p>
+    <p class="text-text-secondary leading-relaxed mb-3">Email: <a href="mailto:privacy@plebi.app" class="text-gold hover:underline">privacy@plebi.app</a></p>
+    <p class="text-text-secondary leading-relaxed mb-3">For complaints regarding Portland private for-hire transportation services, contact the Portland Bureau of Transportation: <a href="tel:5038237483" class="text-gold hover:underline">(503) 823-7483</a></p>
+  </article>
+  <Footer />
+</Layout>

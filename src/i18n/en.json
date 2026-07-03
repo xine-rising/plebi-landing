@@ -23,13 +23,13 @@
   "howItWorks": {
     "heading": "How it works",
     "step1": "Sign up and verify your credentials",
-    "step1Desc": "Upload your license, insurance, and any local permits. We review your documents and run a background check so your passengers know they're riding with a verified professional.",
+    "step1Desc": "Upload your license, insurance, and any local permits. We verify your documents to ensure your passengers know exactly who's driving.",
     "step2": "Get approved",
     "step2Desc": "Once you're verified, your profile goes live and you can start taking bookings. Most verifications are completed within a few business days.",
     "step3": "Share your booking link",
     "step3Desc": "Give your QR code or booking link to great customers after a ride. Your regulars can book you directly — one-time rides or standing appointments for recurring schedules.",
     "step4": "Run your business",
-    "step4Desc": "Track expenses with one-tap entry. Export to Excel or PDF — daily, weekly, or monthly — for your accountant or records. Negotiate fares directly with customers. See route conflicts at a glance before accepting a ride. Optional location sharing lets your connections see when you're nearby."
+    "step4Desc": "Easily add expenses to your automatic monthly data export. Negotiate fares directly. See route conflicts before accepting a ride. Optional location sharing with privacy controls you set."
   },
   "features": {
     "heading": "Built for how you actually work.",
@@ -68,7 +68,7 @@
       },
       "safety": {
         "title": "Safety features they'll trust",
-        "description": "Panic button with emergency services integration. Ride details shared with contacts. Your passengers feel safe because they know exactly who's driving."
+        "description": "Ride details shared with contacts. Your passengers feel safe because they know exactly who's driving."
       },
       "accessible": {
         "title": "Accessible to more riders",
