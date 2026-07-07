@@ -1,0 +1,124 @@
+{
+  "meta": {
+    "title": "Plebi — Run Your Own Book of Business",
+    "description": "Scheduling and business-management software for independent drivers. Keep your regulars, manage your schedule, work on your terms."
+  },
+  "hero": {
+    "wordmark": "Plebi",
+    "tagline": "Independent contractor? Let's actually get you there.",
+    "subtagline": "Plebi is the scheduling and business tool for independent drivers. Keep your regulars. Manage your schedule. Work on your terms.",
+    "launching": "Launching soon",
+    "cta": "Notify me at launch"
+  },
+  "signup": {
+    "emailPlaceholder": "your@email.com",
+    "submit": "Notify me at launch",
+    "newsletterLabel": "I'd like to receive occasional updates about Plebi's launch and news",
+    "newsletterNote": "No spam. Unsubscribe anytime.",
+    "success": "You're on the list. We'll be in touch.",
+    "errorInvalid": "Please enter a valid email address.",
+    "errorGeneric": "Something went wrong. Please try again.",
+    "errorRateLimit": "Too many attempts. Please try again later."
+  },
+  "howItWorks": {
+    "heading": "How it works",
+    "step1": "Sign up and verify your credentials",
+    "step1Desc": "Upload your license, insurance, and any local permits. We verify your documents to ensure your passengers know exactly who's driving.",
+    "step2": "Get approved",
+    "step2Desc": "Once you're verified, your profile goes live and you can start taking bookings. Most verifications are completed within a few business days.",
+    "step3": "Share your booking link",
+    "step3Desc": "Give your QR code or booking link to great customers after a ride. Your regulars can book you directly — one-time rides or standing appointments for recurring schedules.",
+    "step4": "Run your business",
+    "step4Desc": "Easily add expenses to your automatic monthly data export. Negotiate fares directly. See route conflicts before accepting a ride. Optional location sharing with privacy controls you set."
+  },
+  "features": {
+    "heading": "Built for how you actually work.",
+    "intro": "Plebi is scheduling and business-management software for independent drivers — not a company that takes a cut of your work.",
+    "props": {
+      "listing": {
+        "title": "A listing fee, not a commission",
+        "description": "You keep what you earn. Plebi charges a flat subscription — we never take a percentage of your fares."
+      },
+      "freedom": {
+        "title": "No ratings trap, no deactivation threats",
+        "description": "Your listing, your rules. No coercive rating systems. No algorithms deciding whether you get to work tomorrow."
+      },
+      "schedule": {
+        "title": "Organize your schedule",
+        "description": "Manage your availability, your regulars, and your bookings from one place. See your week at a glance."
+      },
+      "experience": {
+        "title": "Built by someone who knows the work",
+        "description": "Designed with 16 years of taxi-industry experience. For professionals, by someone who understands what professionals need."
+      }
+    },
+    "cta": "Notify me at launch"
+  },
+  "passengers": {
+    "heading": "What your passengers get.",
+    "intro": "When your riders book through Plebi, they get a better experience — and you keep the relationship.",
+    "props": {
+      "easyBooking": {
+        "title": "Easy rebooking",
+        "description": "After a great ride, passengers scan your QR code or tap a link to book you again directly. No searching, no dispatch lottery."
+      },
+      "directRelationship": {
+        "title": "They choose you, specifically",
+        "description": "Your passengers see your profile, your availability, and book you — not a random driver assigned by an algorithm."
+      },
+      "safety": {
+        "title": "Safety features they'll trust",
+        "description": "Ride details shared with contacts. Your passengers feel safe because they know exactly who's driving."
+      },
+      "accessible": {
+        "title": "Accessible to more riders",
+        "description": "Built-in accessibility features for visually impaired passengers and anyone who needs extra clarity about their ride."
+      }
+    }
+  },
+  "ownership": {
+    "heading": "Built to be driver-owned.",
+    "p1": "Plebi is being built to become a driver-owned cooperative. Once the platform is sustainable, drivers will be able to become member-owners — with a real ownership stake, a vote in how Plebi is run, and a share of the profits.",
+    "p2": "After operating costs, profits will go back to the drivers who make the platform work — not to outside investors. There are no outside investors.",
+    "pullQuote": "You've built enough value for platforms that answer to shareholders. This one will answer to you.",
+    "p3": "The cooperative structure is on the roadmap, not a promise on a timeline. What is a commitment: your fares are yours — Plebi charges a flat subscription, not a percentage of what you earn. And when the platform is profitable, the people doing the work will own the result.",
+    "checkMath": {
+      "toggle": "Check the math",
+      "intro": "Plebi costs almost nothing to run per driver. Our fixed costs are hosting, tooling, and one salary — they don't grow much as drivers join. Here's what that looks like:",
+      "subscription": "Driver subscription",
+      "netAfterApple": "Net per driver (after App Store cut)",
+      "fixedCosts": "Fixed costs (salary + operations)",
+      "breakeven": "Break-even point",
+      "pastBreakeven": "Past break-even, the surplus scales",
+      "distributable": "distributable to owners",
+      "commitment": "The commitment is straightforward: founder salary and operating costs are covered first. Profit beyond that belongs to the member-owners — redistributed to the drivers, not accumulating to investors who don't exist.",
+      "footnote": "All figures are illustrative estimates. Actual financials will be published transparently once the cooperative is formally established."
+    },
+    "membership": {
+      "framing": "Founding membership will be open to everyone — not just drivers. Drivers become member-owners through the platform. Anyone else who wants a voice can join for $19.99/month — the same membership, the same vote in how Plebi is run. Everyone who wants to be part of this gets to be.",
+      "cta": "I'm interested in becoming a founding member",
+      "nameLabel": "Name",
+      "emailLabel": "Email",
+      "cityLabel": "City / State",
+      "driverCheckbox": "I drive for a living",
+      "noteLabel": "Anything you want us to know (optional)",
+      "notePlaceholder": "What draws you to this, what you'd want from it, anything at all",
+      "submit": "Register my interest",
+      "successHeadline": "You're on the list.",
+      "successDetail": "We'll be in touch when founding membership opens."
+    }
+  },
+  "mission": {
+    "heading": "Your business deserves real tools.",
+    "p1": "The gig economy promised independence and delivered dependency. Drivers lost control of their schedules, their customer relationships, and their professional dignity — all to platforms that treat them as interchangeable inputs.",
+    "p2": "Plebi gives you the software to run your own book of business. We don't employ you. We don't dispatch your rides. We don't decide your fares. We build the tools you need to manage your own schedule, keep your own regulars, and grow your own business.",
+    "p3": "The name comes from Latin: plebi means \"for the common people.\" That's whose side we're on — the people doing the work."
+  },
+  "footer": {
+    "launching": "Launching soon",
+    "contact": "hello@plebi.app",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "copyright": "© 2026 Plebi"
+  }
+}
