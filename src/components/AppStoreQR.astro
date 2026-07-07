@@ -1,0 +1,25 @@
+---
+import { APP_STORE_URL } from '../config';
+// @ts-ignore — qrcode-svg has no types
+import QRCode from 'qrcode-svg';
+
+const qr = new QRCode({
+  content: APP_STORE_URL,
+  padding: 4,
+  width: 200,
+  height: 200,
+  color: '#F5F5F5',
+  background: 'transparent',
+  ecl: 'M',
+  join: true,
+});
+
+const svgContent = qr.svg();
+---
+
+<div class="hidden lg:flex flex-col items-center gap-2">
+  <div class="p-3 bg-white rounded-xl">
+    <Fragment set:html={svgContent} />
+  </div>
+  <p class="text-text-muted text-xs">Scan to download</p>
+</div>

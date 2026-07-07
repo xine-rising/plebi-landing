@@ -17,5 +17,8 @@
     "@tailwindcss/vite": "^4.2.4",
     "astro": "^6.1.8",
     "tailwindcss": "^4.2.4"
+  },
+  "devDependencies": {
+    "qrcode-svg": "^1.1.0"
   }
 }
