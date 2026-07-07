@@ -1,0 +1,88 @@
+---
+import { t } from '../i18n/utils';
+import { Users } from '@lucide/astro';
+---
+
+<section class="px-6 py-16 sm:py-24 bg-surface">
+  <div class="max-w-[70ch] mx-auto">
+    <div class="flex justify-center mb-6">
+      <div class="w-14 h-14 rounded-full bg-bg border border-border flex items-center justify-center">
+        <Users class="w-7 h-7 text-gold" aria-hidden="true" />
+      </div>
+    </div>
+
+    <h2 class="text-text text-2xl sm:text-3xl lg:text-4xl font-bold text-center">
+      {t('ownership.heading')}
+    </h2>
+
+    <div class="mt-8 space-y-5 text-text-body text-lg leading-[1.7]">
+      <p>{t('ownership.p1')}</p>
+      <p>{t('ownership.p2')}</p>
+      <p class="text-gold font-medium text-xl leading-snug">
+        {t('ownership.pullQuote')}
+      </p>
+      <p>{t('ownership.p3')}</p>
+    </div>
+
+    <!-- Check the math accordion -->
+    <details class="mt-10 group">
+      <summary class="flex items-center justify-center gap-2 cursor-pointer text-primary font-semibold text-base hover:text-primary-light transition-colors duration-150 list-none [&::-webkit-details-marker]:hidden select-none">
+        <span>{t('ownership.checkMath.toggle')}</span>
+        <svg class="w-4 h-4 transition-transform duration-200 group-open:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polyline points="6 9 12 15 18 9" />
+        </svg>
+      </summary>
+
+      <div class="mt-6 p-6 bg-bg border border-border rounded-2xl space-y-6">
+        <p class="text-text-body text-base leading-relaxed">
+          {t('ownership.checkMath.intro')}
+        </p>
+
+        <!-- Numbers table -->
+        <div class="space-y-3">
+          <div class="flex justify-between items-baseline py-2 border-b border-border">
+            <span class="text-text-secondary text-sm">{t('ownership.checkMath.subscription')}</span>
+            <span class="text-text font-semibold">$19.99/mo</span>
+          </div>
+          <div class="flex justify-between items-baseline py-2 border-b border-border">
+            <span class="text-text-secondary text-sm">{t('ownership.checkMath.netAfterApple')}</span>
+            <span class="text-text font-semibold">~$17/mo</span>
+          </div>
+          <div class="flex justify-between items-baseline py-2 border-b border-border">
+            <span class="text-text-secondary text-sm">{t('ownership.checkMath.fixedCosts')}</span>
+            <span class="text-text font-semibold">~$8K/mo</span>
+          </div>
+          <div class="flex justify-between items-baseline py-2 border-b border-border">
+            <span class="text-text-secondary text-sm">{t('ownership.checkMath.breakeven')}</span>
+            <span class="text-gold font-bold">~470 drivers</span>
+          </div>
+        </div>
+
+        <!-- Scale projection -->
+        <div class="space-y-3">
+          <p class="text-text text-sm font-semibold uppercase tracking-wide">{t('ownership.checkMath.pastBreakeven')}</p>
+          <div class="grid grid-cols-2 gap-4">
+            <div class="p-4 bg-surface rounded-xl text-center">
+              <p class="text-text-secondary text-sm">1,000 drivers</p>
+              <p class="text-gold text-xl font-bold mt-1">~$9K/mo</p>
+              <p class="text-text-muted text-xs mt-1">{t('ownership.checkMath.distributable')}</p>
+            </div>
+            <div class="p-4 bg-surface rounded-xl text-center">
+              <p class="text-text-secondary text-sm">2,000 drivers</p>
+              <p class="text-gold text-xl font-bold mt-1">~$26K/mo</p>
+              <p class="text-text-muted text-xs mt-1">{t('ownership.checkMath.distributable')}</p>
+            </div>
+          </div>
+        </div>
+
+        <p class="text-text-body text-base leading-relaxed">
+          {t('ownership.checkMath.commitment')}
+        </p>
+
+        <p class="text-text-muted text-xs leading-relaxed italic">
+          {t('ownership.checkMath.footnote')}
+        </p>
+      </div>
+    </details>
+  </div>
+</section>

@@ -76,6 +76,25 @@
       }
     }
   },
+  "ownership": {
+    "heading": "Built to be driver-owned.",
+    "p1": "Plebi is being built to become a driver-owned cooperative. Once the platform is sustainable, drivers will be able to become member-owners — with a real ownership stake, a vote in how Plebi is run, and a share of the profits.",
+    "p2": "After operating costs, profits will go back to the drivers who make the platform work — not to outside investors. There are no outside investors.",
+    "pullQuote": "You've built enough value for platforms that answer to shareholders. This one will answer to you.",
+    "p3": "The cooperative structure is on the roadmap, not a promise on a timeline. What is a commitment: this platform will never take a cut of your fares, and when it's profitable, the people doing the work will own the result.",
+    "checkMath": {
+      "toggle": "Check the math",
+      "intro": "Plebi costs almost nothing to run per driver. Our fixed costs are hosting, tooling, and one salary — they don't grow much as drivers join. Here's what that looks like:",
+      "subscription": "Driver subscription",
+      "netAfterApple": "Net per driver (after App Store cut)",
+      "fixedCosts": "Fixed costs (salary + operations)",
+      "breakeven": "Break-even point",
+      "pastBreakeven": "Past break-even, the surplus scales",
+      "distributable": "distributable to owners",
+      "commitment": "The commitment is straightforward: founder salary and operating costs are covered first. Profit beyond that belongs to the member-owners — redistributed to the drivers, not accumulating to investors who don't exist.",
+      "footnote": "All figures are illustrative estimates. Actual financials will be published transparently once the cooperative is formally established."
+    }
+  },
   "mission": {
     "heading": "Your business deserves real tools.",
     "p1": "The gig economy promised independence and delivered dependency. Drivers lost control of their schedules, their customer relationships, and their professional dignity — all to platforms that treat them as interchangeable inputs.",
