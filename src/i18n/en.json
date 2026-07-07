@@ -93,6 +93,19 @@
       "distributable": "distributable to owners",
       "commitment": "The commitment is straightforward: founder salary and operating costs are covered first. Profit beyond that belongs to the member-owners — redistributed to the drivers, not accumulating to investors who don't exist.",
       "footnote": "All figures are illustrative estimates. Actual financials will be published transparently once the cooperative is formally established."
+    },
+    "membership": {
+      "framing": "Founding membership will be open to everyone — not just drivers. Drivers become member-owners through the platform. Anyone else who wants a voice can join for $19.99/month — the same membership, the same vote in how Plebi is run. Everyone who wants to be part of this gets to be.",
+      "cta": "I'm interested in becoming a founding member",
+      "nameLabel": "Name",
+      "emailLabel": "Email",
+      "cityLabel": "City / State",
+      "driverCheckbox": "I drive for a living",
+      "noteLabel": "Anything you want us to know (optional)",
+      "notePlaceholder": "What draws you to this, what you'd want from it, anything at all",
+      "submit": "Register my interest",
+      "successHeadline": "You're on the list.",
+      "successDetail": "We'll be in touch when founding membership opens."
     }
   },
   "mission": {
