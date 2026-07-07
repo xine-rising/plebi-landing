@@ -5,10 +5,11 @@
   },
   "hero": {
     "wordmark": "Plebi",
-    "tagline": "Independent contractor? Let's actually get you there.",
-    "subtagline": "Plebi is the scheduling and business tool for independent drivers. Keep your regulars. Manage your schedule. Work on your terms.",
+    "tagline": "The ride platform drivers will own.",
+    "subtagline": "Plebi is a scheduling and booking tool for independent drivers — built to become a driver-owned cooperative. Flat subscription, no cut of your fares, and a path to real ownership.",
     "launching": "Launching soon",
-    "cta": "Notify me at launch"
+    "cta": "Notify me at launch",
+    "ownershipAnchor": "See how ownership works"
   },
   "signup": {
     "emailPlaceholder": "your@email.com",
@@ -113,6 +114,11 @@
     "p1": "The gig economy promised independence and delivered dependency. Drivers lost control of their schedules, their customer relationships, and their professional dignity — all to platforms that treat them as interchangeable inputs.",
     "p2": "Plebi gives you the software to run your own book of business. We don't employ you. We don't dispatch your rides. We don't decide your fares. We build the tools you need to manage your own schedule, keep your own regulars, and grow your own business.",
     "p3": "The name comes from Latin: plebi means \"for the common people.\" That's whose side we're on — the people doing the work."
+  },
+  "beta": {
+    "heading": "Want in early?",
+    "body": "Join the beta and help shape Plebi. Available now on iPhone via TestFlight.",
+    "cta": "Become a beta tester"
   },
   "footer": {
     "launching": "Launching soon",

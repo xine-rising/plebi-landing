@@ -32,6 +32,14 @@ import AppStoreQR from './AppStoreQR.astro';
     <AppStoreQR />
   </div>
 
+  <!-- Secondary CTA: anchor to ownership section -->
+  <a
+    href="#ownership"
+    class="mt-6 text-primary hover:text-primary-light font-semibold text-base transition-colors duration-150"
+  >
+    {t('hero.ownershipAnchor')} &darr;
+  </a>
+
   <div class="mt-8 w-full max-w-md">
     <SignupFlow />
   </div>
