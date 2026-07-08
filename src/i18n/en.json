@@ -9,28 +9,17 @@
     "tagline2": "The ride platform drivers will own.",
     "subtagline": "Plebi is a scheduling and booking tool for independent drivers — built to become a driver-owned cooperative. Flat subscription, no cut of your fares, and a path to real ownership.",
     "launching": "Launching soon",
-    "cta": "Notify me at launch",
     "ownershipAnchor": "See how ownership works"
-  },
-  "signup": {
-    "emailPlaceholder": "your@email.com",
-    "submit": "Notify me at launch",
-    "newsletterLabel": "I'd like to receive occasional updates about Plebi's launch and news",
-    "newsletterNote": "No spam. Unsubscribe anytime.",
-    "success": "You're on the list. We'll be in touch.",
-    "errorInvalid": "Please enter a valid email address.",
-    "errorGeneric": "Something went wrong. Please try again.",
-    "errorRateLimit": "Too many attempts. Please try again later."
   },
   "howItWorks": {
     "heading": "How it works",
-    "step1": "Sign up and verify your credentials",
-    "step1Desc": "Upload your license, insurance, and any local permits. We verify your documents to ensure your passengers know exactly who's driving.",
-    "step2": "Get approved",
-    "step2Desc": "Once you're verified, your profile goes live and you can start taking bookings. Most verifications are completed within a few business days.",
+    "step1": "Create your account",
+    "step1Desc": "Join as a rider, a driver, or both. One account covers it.",
+    "step2": "Build your profile",
+    "step2Desc": "Add your license, taxi permit, insurance, vehicle info, rates, schedule, and contact number. Onboard with Stripe if you want to accept pre-payments. It's your storefront, you decide what goes in it.",
     "step3": "Share your booking link",
     "step3Desc": "Give your QR code or booking link to great customers after a ride. Your regulars can book you directly — one-time rides or standing appointments for recurring schedules.",
-    "step4": "Run your business",
+    "step4": "Profit",
     "step4Desc": "Easily add expenses to your automatic monthly data export. Negotiate fares directly. See route conflicts before accepting a ride. Optional location sharing with privacy controls you set."
   },
   "features": {
@@ -53,8 +42,7 @@
         "title": "Built by someone who knows the work",
         "description": "Designed with 16 years of taxi-industry experience. For professionals, by someone who understands what professionals need."
       }
-    },
-    "cta": "Notify me at launch"
+    }
   },
   "passengers": {
     "heading": "What your passengers get.",

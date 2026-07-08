@@ -27,3 +27,26 @@
 - [ ] Real device testing (iPhone, Android)
 - [ ] VoiceOver screen reader testing
 - [ ] Newsletter sync to email marketing service (vendor TBD)
+
+## Location sharing and panic button — architectural commitments
+
+### Principles
+
+- Plebi servers never store driver location data
+- Panic button dials 911 directly from the driver's phone (no server involvement)
+- E911 handles location-to-PSAP routing at the carrier/OS level
+- Optional emergency contacts: driver can designate 1-2 contacts who receive SMS with location if panic pressed
+
+### Decided (driver-facing controls)
+
+- Location sharing is opt-in, defaults off
+- Driver chooses visibility: connections only, or all riders
+- Driver chooses when: always-on, business-hours-only, or toggle-available
+- Always approximate (~3 mile radius), never precise coordinates
+
+### Open questions
+
+- How does "all riders can see nearby drivers" work without server-side location storage? Options: (A) accept server storage for this feature only, (B) build peer-to-peer beacon, (C) restrict location visibility to connections only and drop "all riders" option
+- Definition of "connection" — past customers, QR code holders, other?
+- Backup for panic when phone is destroyed/dead: accept limitation, or notify emergency contacts at ride start with auto-expire?
+- Privacy policy language for location data handling
