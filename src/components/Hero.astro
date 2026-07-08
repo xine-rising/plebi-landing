@@ -6,6 +6,11 @@ import AppStoreQR from './AppStoreQR.astro';
 ---
 
 <section class="px-6 py-16 sm:py-24 lg:py-32 flex flex-col items-center text-center">
+  <!-- Wordmark above logo -->
+  <p class="text-text text-2xl sm:text-3xl font-bold tracking-tight mb-4">
+    {t('hero.wordmark')}
+  </p>
+
   <img
     src="/logo.png"
     alt="Plebi logo — a painted rose with magenta petals, gold center, and green leaves"
@@ -17,6 +22,10 @@ import AppStoreQR from './AppStoreQR.astro';
   <h1 class="mt-6 text-text text-[2rem] sm:text-5xl lg:text-6xl font-bold tracking-tight leading-tight">
     {t('hero.tagline')}
   </h1>
+
+  <p class="mt-3 text-text-secondary text-xl sm:text-2xl lg:text-3xl font-semibold tracking-tight">
+    {t('hero.tagline2')}
+  </p>
 
   <p class="mt-4 text-text-body text-lg sm:text-xl max-w-xl leading-relaxed">
     {t('hero.subtagline')}
